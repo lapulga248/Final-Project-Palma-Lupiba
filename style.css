@@ -1,43 +1,99 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #222831;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	min-height: 100vh;
+	overflow: hidden;
+	background-color: #393E46;
+	color: #fff;
+	font-family: sans-serif;
+	padding: 0 15px;
+}
+hr {
+	margin-bottom: 10px;
+	border-color: #EEEEEE;
+}
+#checkers {
+	position: relative;
+	left: 780px;
+	color: #EEEEEE;
+	background-color: #222831;
+	padding: 15px;
+	border-radius: 15px;
+	left: 775px;
+}
+.header{
+	position: sticky;
+	top: 0;
+	background-color: #393E46;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+	padding: 15px 0;
+	& #countrycity_input{
+		background-color: #222831;
+		border: none;
+		padding: 12px;
+		font-size: 16px;
+		border-radius: 25px;
+		color: #EEEEEE;
+		&:focus{
+			outline: none;
+		}
+	}
+	& #checkBtn{
+		border: none;
+		font-size: 16px;
+		padding: 12px;
+		border-radius: 25px;
+		background-color: #00ADB5;
+		cursor: pointer;
+		color: #222831;
+	}
+}
+.card{
+	background-color: #222831;
+	padding: 15px;
+	border-radius: 15px;
+	position: relative;
+	left: 700px;
+	margin-bottom: 15px;
+	& p{
+		font-size: 14px;
+		color: #EEEEEE;
+	}
+	& h2 {
+		font-size: 32px;
+		font-weight: 500;
+	}
+}
+.weather-data{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+	& .weather-left{
+		grid-column: span 1;
+		& .current-weather{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			& h2{
+				margin: 7px 0;
+				color: #EEEEEE;
+			}
+			& p{
+				color: #EEEEEE;
+			}
+		}
+		& .card-footer{
+			font-size: 14px;
+			margin-bottom: 12px;
+		}
+	}
 }
 
-h1 {
 
-    color: #393E46;
-}
-
-.container {
-    background: #00ADB5;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-input {
-    padding: 10px;
-    margin: 10px 0;
-    width: 200px;
-    color: #222831;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #222831;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #1111;
-}
 
