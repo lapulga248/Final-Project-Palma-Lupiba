@@ -4,13 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Application</title>
+    <link href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" rel="stylesheet">
+	<link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Weather Checker</h1>
-        <input type="text" id="country-cityInput" placeholder="Enter a Country/City"/>
-        <button id="checkWeatherBtn">Check Weather</button>
+        <div class="container">
+            <div class="header">
+                <h1 id="checkers">Weather Checker</h1>
+                <div class="weather-input">
+                    <input type="text" name="city" id="countrycity_input" placeholder="Enter a Country/City"/>
+                    <button type="button" id="checkBtn">
+                        <i class="fa-regular fa-search"></i>Check Weather
+                    </button>
+                </div>
+        </div>
+        <div class="weather-data">
+            <div class="weather-left">
+                <div class="card">
+                    <div class="current-weather">
+                        <div class="details">
+                            <p>Today</p>
+                            <h2>0&deg;C</h2>
+                            <p>Cloudy</p>
+                        </div>
+                        <div class="weather-icon">
+                            <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="card-footer">
+                        <p><i class="fa-light fa-calendar"></i> Date Today</p>
+                        <p><i class="fa-light fa-location-dot"></i> Country / City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
