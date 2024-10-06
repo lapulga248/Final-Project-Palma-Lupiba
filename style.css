@@ -17,12 +17,11 @@ hr {
 }
 #checkers {
 	position: relative;
-	left: 780px;
+	left: 785px;
 	color: #EEEEEE;
 	background-color: #222831;
 	padding: 15px;
 	border-radius: 15px;
-	left: 775px;
 }
 .header{
 	position: sticky;
@@ -91,6 +90,40 @@ hr {
 		& .card-footer{
 			font-size: 14px;
 			margin-bottom: 12px;
+		}
+	}
+	& .weather-right{
+		grid-column: span 3;
+		& .highlights{
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: 15px;
+			& .card-head{
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 10px;
+			}
+			& .card-item{
+				display: flex;
+				justify-content: space-between;
+			}
+			& .card1{
+				position: relative;
+				top: 100px;
+				left: 343px;
+				background-color: #222831;
+				margin-bottom: 15px;
+				padding: 15px;
+				border-radius: 15px;
+				& p{
+					font-size: 14px;
+					color: #999;
+				}
+				& h2 {
+					font-size: 32px;
+					font-weight: 500;
+				}
+			}
 		}
 	}
 }
