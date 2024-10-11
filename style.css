@@ -53,7 +53,7 @@ hr {
 		color: #222831;
 	}
 }
-.card{
+.cardfivedays{
 	background-color: #222831;
 	padding: 15px;
 	border-radius: 15px;
@@ -63,6 +63,40 @@ hr {
 	& p{
 		font-size: 14px;
 		color: #EEEEEE;
+	}
+	& h2 {
+		font-size: 32px;
+		font-weight: 500;
+		text-align: center;
+	}
+}
+.cardtoday {
+	background-color: #222831;
+	padding: 15px;
+	border-radius: 15px;
+	position: relative;
+	left: 700px;
+	margin-bottom: 15px;
+	& p{
+		font-size: 14px;
+		color: #EEEEEE;
+	}
+	& h2 {
+		font-size: 32px;
+		font-weight: 500;
+	}
+}
+.cardtodayAt{
+	background-color: #222831;
+	padding: 15px;
+	border-radius: 15px;
+	position: relative;
+	bottom: 30px;
+	left: 700px;
+	margin-bottom: 15px;
+	& p{
+		font-size: 14px;
+		color: #999;
 	}
 	& h2 {
 		font-size: 32px;
@@ -91,6 +125,16 @@ hr {
 			font-size: 14px;
 			margin-bottom: 12px;
 		}
+		& .forecast-item{
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			place-items: center;
+			margin-bottom: 15px;
+			& .icon-wrapper{
+				display: flex;
+				align-items: center;
+			}
+		}
 	}
 	& .weather-right{
 		grid-column: span 3;
@@ -107,10 +151,26 @@ hr {
 				display: flex;
 				justify-content: space-between;
 			}
-			& .card1{
+			& .cardwindspeed{
 				position: relative;
 				top: 100px;
 				left: 343px;
+				background-color: #222831;
+				margin-bottom: 15px;
+				padding: 15px;
+				border-radius: 15px;
+				& p{
+					font-size: 14px;
+					color: #999;
+				}
+				& h2 {
+					font-size: 32px;
+					font-weight: 500;s
+				}
+			}
+			& .cardhumidity{
+				position: relative;
+				left: 700px;
 				background-color: #222831;
 				margin-bottom: 15px;
 				padding: 15px;
@@ -125,8 +185,23 @@ hr {
 				}
 			}
 		}
+		& .hourly-forecast{
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			column-gap: 10px;
+			position: relative;
+			right: 900px;
+			margin-top: 550px;
+			& .cardtodayAt{
+				text-align: center;
+			}
+		}
+		#today-at{
+			text-align: left;
+			color: #fff;
+			position: relative;
+			top: 510px;
+			right: 200px;
+		}
 	}
 }
-
-
-
