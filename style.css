@@ -43,7 +43,7 @@ hr {
 			outline: none;
 		}
 	}
-	& #checkBtn{
+	& #checkweatherBtn{
 		border: none;
 		font-size: 16px;
 		padding: 12px;
@@ -53,7 +53,7 @@ hr {
 		color: #222831;
 	}
 }
-.cardfivedays{
+.cardfiveDays{
 	background-color: #222831;
 	padding: 15px;
 	border-radius: 15px;
@@ -70,7 +70,7 @@ hr {
 		text-align: center;
 	}
 }
-.cardtoday {
+.cardToday {
 	background-color: #222831;
 	padding: 15px;
 	border-radius: 15px;
@@ -103,13 +103,13 @@ hr {
 		font-weight: 500;
 	}
 }
-.weather-data{
+.weatherData{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 12px;
-	& .weather-left{
+	& .weatherLeft{
 		grid-column: span 1;
-		& .current-weather{
+		& .weatherCurrent{
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
@@ -121,37 +121,37 @@ hr {
 				color: #EEEEEE;
 			}
 		}
-		& .card-footer{
+		& .todayBottom{
 			font-size: 14px;
 			margin-bottom: 12px;
 		}
-		& .forecast-item{
+		& .forecastItems{
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			place-items: center;
 			margin-bottom: 15px;
-			& .icon-wrapper{
+			& .iconWrapper{
 				display: flex;
 				align-items: center;
 			}
 		}
 	}
-	& .weather-right{
+	& .weatherRight{
 		grid-column: span 3;
-		& .highlights{
+		& .weatherHighlights{
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
 			column-gap: 15px;
-			& .card-head{
+			& .cardHead{
 				display: flex;
 				justify-content: space-between;
 				margin-bottom: 10px;
 			}
-			& .card-item{
+			& .cardItem{
 				display: flex;
 				justify-content: space-between;
 			}
-			& .cardwindspeed{
+			& .cardwindSpeed{
 				position: relative;
 				top: 100px;
 				left: 343px;
@@ -168,7 +168,7 @@ hr {
 					font-weight: 500;s
 				}
 			}
-			& .cardhumidity{
+			& .cardHumidity{
 				position: relative;
 				left: 700px;
 				background-color: #222831;
@@ -185,7 +185,7 @@ hr {
 				}
 			}
 		}
-		& .hourly-forecast{
+		& .hourlyForecast{
 			display: grid;
 			grid-template-columns: repeat(8, 1fr);
 			column-gap: 10px;
@@ -196,7 +196,7 @@ hr {
 				text-align: center;
 			}
 		}
-		#today-at{
+		#todayAt{
 			text-align: left;
 			color: #fff;
 			position: relative;
