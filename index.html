@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Application</title>
+    <title>Weather Checker Application</title>
     <link href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- Connection from HTML to CSS -->
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="weatherData"> <!-- This contains all related data about the Weather -->
-            <div class="weatherLeft"> <!-- The left section contains the Today Weather & 5 Day Forecast Feature -->
+            <div class="weatherLeft"> <!-- The left section contains the Today Weather -->
                 <div class="cardToday"> <!-- This contains all data related to Today Weather -->
                     <div class="weatherCurrent">
                         <div class="todayDetails">
@@ -35,57 +35,7 @@
                     <hr>
                     <div class="todayBottom"> <!-- The footer of Today Weather -->
                         <p><i class="fa-light fa-calendar"></i> Date Today</p>
-                        <p><i class="fa-light fa-location-dot"></i> Country / City</p>
-                    </div>
-                </div>
-                <div class="cardfiveDays"> <!-- This contains all data related to 5 Day Forecast Feature -->
-                    <h2 id="fiveDays">5-DAY Forecast</h2>
-                    <div class="fivedaysForecast">
-                        <div class="forecastItems">
-                            <div class="iconWrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" 
-                                alt="">
-                                <span>0&deg;C</span>
-                            </div>
-                            <p>1, Jan</p>
-                            <p>Monday</p>
-                        </div>
-                        <div class="forecastItems">
-                            <div class="iconWrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" 
-                                alt="">
-                                <span>0&deg;C</span>
-                            </div>
-                            <p>1, Jan</p>
-                            <p>Monday</p>
-                        </div>
-                        <div class="forecastItems">
-                            <div class="iconWrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" 
-                                alt="">
-                                <span>0&deg;C</span>
-                            </div>
-                            <p>1, Jan</p>
-                            <p>Monday</p>
-                        </div>
-                        <div class="forecastItems">
-                            <div class="iconWrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" 
-                                alt="">
-                                <span>0&deg;C</span>
-                            </div>
-                            <p>1, Jan</p>
-                            <p>Monday</p>
-                        </div>
-                        <div class="forecastItems">
-                            <div class="iconWrapper">
-                                <img src="https://openweathermap.org/img/wn/02d.png" 
-                                alt="">
-                                <span>0&deg;C</span>
-                            </div>
-                            <p>1, Jan</p>
-                            <p>Monday</p>
-                        </div>
+                        <p><i class="fa-light fa-location-dot"></i> City, Country</p>
                     </div>
                 </div>
             </div>
@@ -96,7 +46,7 @@
                             <p>Humidity</p>
                         </div>
                         <div class="cardItem">
-                            <i class="fa-light fa-droplet fa-2x"></i>
+                            <i class="fa-light fa-droplet fa-3x"></i>
                             <h2 id="humidityValue">0%</h2>
                         </div>
                     </div>
@@ -105,52 +55,9 @@
                             <p>Wind Speed</p>
                         </div>
                         <div class="cardItem">
-                            <i class="fa-light fa-location-arrow fa-2x"></i>
+                            <i class="fa-light fa-location-arrow fa-3x"></i>
                             <h2 id="windspeedValue">0m/s</h2>
                         </div>
-                    </div>
-                </div>
-                <h2 id="todayAt">Today At</h2> <!-- The bottom section contains the Hourly Forecast Feature -->
-                <div class="hourlyForecast"> <!-- This contains all the data related to the Hourly Forecast Feature -->
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
-                    </div>
-                    <div class="cardtodayAt">
-                        <p>9 AM</p>
-                        <img src="https://openweathermap.org/img/wn/04d.png" alt="">
-                        <p>0&deg;C</p>
                     </div>
                 </div>
             </div>
