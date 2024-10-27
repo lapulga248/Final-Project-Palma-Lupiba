@@ -1,90 +1,156 @@
 *{
 	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 }
 body{
-	background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 0.50)),url('weather background.png');
-	background-position: center;
-    background-repeat: no-repeat;
+	background: linear-gradient(-45deg, #F5F7F8, #01204E, #163020, #ECCA9C);
+  	animation: gradient 15s ease infinite;
+  	background-size: 400% 400%;
 	min-height: 100vh;
-	overflow: hidden;
-	background-color: #393E46;
 	color: #fff;
-	font-family: sans-serif;
-	padding: 0 15px;
+	font-family: sans-serif;	
+}
+@keyframes gradient {
+	0% {
+    	background-position: 0% 50%;
+    }
+    50% {
+    	background-position: 100% 50%;
+    }
+    100% {
+    	background-position: 0% 50%;
+    }
 }
 hr {
 	margin-bottom: 15px;
 	border-color: #EEEEEE;
 }
 #checkers {
-	position: relative;
-	left: 778px;
-	color: #EEEEEE;
-	border-style: solid;
-	background-color: transparent;
+	font-family: Courier New;
+	position: fixed;
+	bottom: 550px;
+	right: 140px;
+	color: #fff;
+	border: 4px solid transparent;
+  	box-shadow: 5px 10px 18px #ECCA9C;
+  	background: linear-gradient(to right, #59B4C3 , #ECCA9C); 
+  	background-clip: padding-box, border-box;
+  	background-origin: padding-box, border-box;
 	padding: 15px;
 	border-radius: 15px;
 }
 .header{
-	position: sticky;
-	top: 0;
-	background-color: transparent;
-	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 10px;
 	padding: 15px 0;
 	& #countrycity_input{
+		position: relative;
+		bottom: 125px;
+		right: 1px;
+		border-color: #DEAC80;
 		background-color: transparent;
-		border-color: #4CC9FE;
 		border: groove solid;
 		padding: 12px;
 		font-size: 16px;
-		border-radius: 25px;
+		border-radius: 15px;
 		color: #fff;
 		&:focus{
-			outline: groove lightblue;
+			outline: none;
 		}
 	}
 	& #checkweatherBtn{
+		position: relative;
+		bottom: 125px;
+		right: 1px;
 		border-color: #fff;
 		border: none;
 		font-size: 16px;
 		padding: 12px;
 		border-radius: 25px;
-		background-color: #0D92F4;
+		background-color: #AB886D;
 		cursor: pointer;
 		color: #fff;
 	}
 }
 #checkweatherBtn:hover{
-	box-shadow: 5px 10px 18px lightblue;
-	background-color: transparent;
+	background-color: #DEAC80;
 	color: #fff;
 	transition-delay:0.1s;
 }
-.cardToday {
-	border-style: solid;
-	background-color: rgba(30, 39, 39, 0.3);
-	box-shadow: 5px 10px 18px lightblue;
-	border-color: #fff;
-	padding: 30px;
-	border-radius: 15px;
-	position: relative;
-	left: 700px;
-	margin-bottom: 15px;
-	& p{
-		font-size: 20px;
-		color: #EEEEEE;
-		margin-bottom: 10px;
-	}
-	& h2 {
-		font-size: 50px;
-		font-weight: 500;
-		margin: 7px 0;
-	}
+.container {
+	position: fixed;
+  	width: 600px; 
+  	height: auto;
+  	top: 50%; 
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	display: flex;
+  	flex-direction: column; 
+  	align-items: center;
+  	gap: 20px; 
+}
+.cardToday{
+  	border-style: solid;
+  	box-shadow: 5px 10px 18px black;
+	border-image: linear-gradient(to right, #59B4C3 0%, #ECCA9C 100%) 1;
+  	padding: 30px;
+  	background-color: transparent;
+  	height: 300px; 
+  	position: relative;
+  	bottom: 160px;
+  	left: 10%;
+  	width: 500px;
+  	& p {
+  		font-size: 20px;
+  		color: #EEEEEE;
+  	}
+  	& h2 {
+  		font-size: 50px;
+  		font-weight: 500;
+  	}
+}
+.cardHumidity{
+  	border-style: solid;
+  	box-shadow: 5px 10px 18px black;
+	border-image: linear-gradient(to right, #59B4C3 0%, #ECCA9C 100%) 1;
+  	padding: 30px;
+  	border-radius: 15px;
+  	background-color: transparent;
+  	height: 150px;
+  	position: relative;
+  	top: 160px;
+  	right: 460px;
+  	width: 500px;
+  	& p {
+  		font-size: 25px;
+  		color: #EEEEEE;
+  	}
+  	& h2 {
+  		font-size: 50px;
+  		font-weight: 500;
+  	}
+}
+.cardwindSpeed{
+  	border-style: solid;
+  	box-shadow: 5px 10px 18px black;
+	border-image: linear-gradient(to right, #59B4C3 0%, #ECCA9C 100%) 1;
+  	padding: 30px;
+  	border-radius: 15px;
+  	background-color: transparent;
+  	height: 150px;
+  	position: relative;
+  	top: 330px;
+  	right: 975px;
+  	width: 500px;
+  	& p {
+  		font-size: 25px;
+  		color: #EEEEEE;
+  	}
+  	& h2 {
+  		font-size: 50px;
+  		font-weight: 500;
+  	}
 }
 .weatherData{
 	display: grid;
@@ -123,44 +189,6 @@ hr {
 			& .cardItem{
 				display: flex;
 				justify-content: space-between;
-			}
-			& .cardwindSpeed{
-				position: relative;
-				top: 550px;
-				right: 249px;
-				border-style: solid;
-				background-color: rgba(30, 39, 39, 0.3);
-				box-shadow: 5px 10px 18px lightblue;
-				margin-bottom: 15px;
-				padding: 30px;
-				border-radius: 20px;
-				& p{
-					font-size: 30px;
-					color: #fff;
-				}
-				& h2 {
-					font-size: 50px;
-					font-weight: 500;
-				}
-			}
-			& .cardHumidity{
-				position: relative;
-				left: 227px;
-				top: 350px;
-				border-style: solid;
-				background-color: rgba(30, 39, 39, 0.3);
-				box-shadow: 5px 10px 18px lightblue;
-				margin-bottom: 15px;
-				padding: 30px;
-				border-radius: 20px;
-				& p{
-					font-size: 30px;
-					color: #fff;
-				}
-				& h2 {
-					font-size: 50px;
-					font-weight: 500;
-				}
 			}
 		}
 	}
