@@ -24,7 +24,9 @@ function checkWeatherData(name, lat, lon, country){
 	const currentMonths = [ 'January','February','March','April','May','June','July','August','September','October','November','December'];
 
 	// This fetch code sends a GET request to the OpenWeatherMap Current Weather API using the URL and the response is converted into a JSON Format. 
-	fetch(weatherApiURL).then(res => res.json()).then(data => { 
+	fetch(weatherApiURL)
+		.then(response => response.json())
+		.then(data => { 
 
 		// This code creates a date object that represents the current date and time to display today's date in the weather information.
 		const currentDate = new Date(); 
@@ -99,7 +101,9 @@ function checkCountryCityData(){
 	const geocodingApiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${countrycityName}&limit=1&appid=${apiKey}`; 
 
 	// This fetch code sends a GET request to the OpenWeatherMap Geocoding API using the URL and the response is converted into a JSON Format. 
-	fetch(geocodingApiURL).then(res => res.json()).then(data => { 
+	fetch(geocodingApiURL)
+		.then(response => response.json())
+		.then(data => { 
 
 		// Once the data is retrieved, This code extracts specific properties which is the four parameters from the first object of the returned data array [0].
 		const {name, lat, lon, country} = data[0]; 
